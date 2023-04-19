@@ -1,6 +1,7 @@
 package lk.ijse.D24.controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -60,11 +61,24 @@ public class LoginFormController {
 
     public void loginOnAction(ActionEvent event) throws SQLException, IOException, ClassNotFoundException {
 
-        List<UserDTO> userDTOS = userBO.loadAllUsers();
+        List<UserDTO> allUsers = userBO.loadAllUsers();
+
+        for (UserDTO userDTO : allUsers ) {
+            //if(userDTO.getUserName().equals(txtUserName.getText()) && (userDTO.getPassword().equals(txtShowPassword.getText())||
+                  //  userDTO.getPassword().equals(txtHidePassword.getText()))){
+
+                new Alert(Alert.AlertType.CONFIRMATION,"Ok").show();
+
+           // }else {
+              //  new Alert(Alert.AlertType.ERROR,"Invalid").show();
+          //  }
+
+        }
 
 
 
 
 
-    }
+
+        }
 }

@@ -21,8 +21,16 @@ public class UserBOImpl implements UserBO {
     public List<UserDTO> loadAllUsers() throws SQLException, ClassNotFoundException, IOException {
 
         List<User> users = userDAO.loadAll();
+        ArrayList<UserDTO> arrayList = new ArrayList<>();
 
+        for (User user : users) {
+            arrayList.add(new UserDTO(
+                    user.getUserId(),
+                    user.getUserName(),
+                    user.getPassword()
+            ));
 
-        return null;
+        }
+        return arrayList;
     }
 }
