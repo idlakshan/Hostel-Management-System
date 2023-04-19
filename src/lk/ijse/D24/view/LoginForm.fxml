@@ -59,7 +59,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="138.0" layoutY="402.0" prefHeight="35.0" prefWidth="131.0" style="-fx-background-color: #0042b5; -fx-background-radius: 30;" text="Login" textFill="WHITE">
+            <JFXButton buttonType="RAISED" layoutX="138.0" layoutY="402.0" onAction="#loginOnAction" prefHeight="35.0" prefWidth="131.0" style="-fx-background-color: #0042b5; -fx-background-radius: 30;" text="Login" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
