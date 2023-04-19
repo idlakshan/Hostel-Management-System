@@ -1,12 +1,16 @@
 package lk.ijse.D24.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import lk.ijse.D24.bo.custom.UserBO;
 import lk.ijse.D24.bo.custom.impl.UserBOImpl;
 import lk.ijse.D24.dto.UserDTO;
@@ -21,9 +25,10 @@ public class LoginFormController {
     public TextField txtShowPassword;
     public ImageView lblCloseEye;
     public ImageView lblOpenEye;
-
+    public AnchorPane loginFormContext;
 
     private final UserBO userBO=new UserBOImpl();
+
 
     String password;
 
@@ -64,14 +69,16 @@ public class LoginFormController {
         List<UserDTO> allUsers = userBO.loadAllUsers();
 
         for (UserDTO userDTO : allUsers ) {
-            //if(userDTO.getUserName().equals(txtUserName.getText()) && (userDTO.getPassword().equals(txtShowPassword.getText())||
-                  //  userDTO.getPassword().equals(txtHidePassword.getText()))){
+            if(userDTO.getUserName().equals(txtUserName.getText()) && (userDTO.getPassword().equals(txtShowPassword.getText())||
+                   userDTO.getPassword().equals(txtHidePassword.getText()))){
 
-                new Alert(Alert.AlertType.CONFIRMATION,"Ok").show();
+                Stage stage=(Stage) loginFormContext.getScene().getWindow();
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/DashboardForm.fxml"))));
+                stage.centerOnScreen();
 
-           // }else {
-              //  new Alert(Alert.AlertType.ERROR,"Invalid").show();
-          //  }
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Invalid").show();
+            }
 
         }
 

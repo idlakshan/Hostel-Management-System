@@ -1,0 +1,7 @@
+.button:hover{
+    -fx-background-color: #ebae46;
+    -fx-text-fill: white;
+}
+.button{
+    -fx-background-color: transpatents;
+}

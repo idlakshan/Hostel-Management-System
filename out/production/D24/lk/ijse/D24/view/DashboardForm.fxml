@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="dashboardContext" prefHeight="676.0" prefWidth="1341.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24.controller.DashboardFormController">
+   <children>
+      <VBox prefHeight="641.0" prefWidth="278.0" style="-fx-background-color: #3f4145;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="149.0" fitWidth="229.0" layoutX="18.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/dashboardone.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnStudent" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#studentOnAction" prefHeight="70.0" prefWidth="280.0" stylesheets="@css/style.css" text="Students" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Student.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRoom" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#roomOnAction" prefHeight="70.0" prefWidth="280.0" stylesheets="@css/style.css" text="Rooms" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Room.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBooking" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#bookingOnAction" prefHeight="70.0" prefWidth="280.0" stylesheets="@css/style.css" text="Booking" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/details.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReport" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reportOnAction" prefHeight="70.0" prefWidth="280.0" stylesheets="@css/style.css" text="Reserve Details" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Report.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="loadFormContext" layoutX="278.0" prefHeight="676.0" prefWidth="1064.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="13.0" layoutY="103.0" prefHeight="140.0" prefWidth="229.0" style="-fx-background-color: #00B8EE; -fx-background-radius: 20;">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="13.0" layoutY="223.0" prefHeight="21.0" prefWidth="229.0" style="-fx-background-color: #08A4D2;" />
+            <ImageView fitHeight="84.0" fitWidth="93.0" layoutX="133.0" layoutY="127.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/StudentCount.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="35.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblStudentCount" layoutX="51.0" layoutY="123.0" prefHeight="59.0" prefWidth="38.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="265.0" layoutY="25.0" prefHeight="246.0" prefWidth="777.0" style="-fx-background-color: #E9ECE9;">
+               <children>
+                  <ComboBox fx:id="cmbRoomIds" layoutX="250.0" layoutY="11.0" prefHeight="31.0" prefWidth="278.0" promptText="Room Ids">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+                  <Label layoutX="14.0" layoutY="78.0" prefHeight="140.0" prefWidth="239.0" style="-fx-background-color: #019C50;">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="197.0" prefHeight="21.0" prefWidth="239.0" style="-fx-background-color: #088947;" />
+                  <ImageView fitHeight="100.0" fitWidth="93.0" layoutX="140.0" layoutY="92.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/AllRoom.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="26.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Rooms">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lblAllRooms" layoutX="50.0" layoutY="103.0" prefHeight="59.0" prefWidth="26.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="267.0" layoutY="78.0" prefHeight="140.0" prefWidth="239.0" style="-fx-background-color: #E88D11;">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="267.0" layoutY="197.0" prefHeight="21.0" prefWidth="239.0" style="-fx-background-color: #D48112;" />
+                  <ImageView fitHeight="84.0" fitWidth="84.0" layoutX="409.0" layoutY="95.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/list.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="274.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recived Room">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lblRoomReceivedCount" layoutX="303.0" layoutY="103.0" prefHeight="59.0" prefWidth="26.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="521.0" layoutY="78.0" prefHeight="140.0" prefWidth="239.0" style="-fx-background-color: #F170B7;">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="521.0" layoutY="197.0" prefHeight="21.0" prefWidth="239.0" style="-fx-background-color: #D0619E;" />
+                  <ImageView fitHeight="84.0" fitWidth="78.0" layoutX="670.0" layoutY="97.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/remain.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="528.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Room">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lblAvailableRoomCount" layoutX="562.0" layoutY="103.0" prefHeight="59.0" prefWidth="26.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
