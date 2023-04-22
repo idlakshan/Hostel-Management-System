@@ -1,5 +1,8 @@
 package lk.ijse.D24.util;
 
+import lk.ijse.D24.entity.Reservation;
+import lk.ijse.D24.entity.Room;
+import lk.ijse.D24.entity.Student;
 import lk.ijse.D24.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -21,6 +24,9 @@ public class FactoryConfiguration {
         configuration.setProperties(p);
 
         configuration.addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(Student.class);
+        configuration.addAnnotatedClass(Room.class);
+        configuration.addAnnotatedClass(Reservation.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }

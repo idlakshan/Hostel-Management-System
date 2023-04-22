@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="676.0" prefWidth="1064.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24.controller.DetailsReportFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="55.0" prefWidth="352.0" text="REGISTER DETAILS">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="69.0" text="DASHBOARD/REGISTER DETAILS">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="113.0" prefHeight="0.0" prefWidth="989.0" />
+      <TableView fx:id="tblRegisterDetails" layoutX="14.0" layoutY="263.0" prefHeight="389.0" prefWidth="1036.0">
+        <columns>
+          <TableColumn fx:id="colRegId" prefWidth="147.0" text="Register Id" />
+          <TableColumn fx:id="colRegDate" prefWidth="274.0" text="Register Date" />
+            <TableColumn fx:id="colSId" prefWidth="147.0" text="Student ID" />
+            <TableColumn fx:id="colSName" prefWidth="273.0" text="Student Name" />
+            <TableColumn fx:id="colContact" prefWidth="194.0" text="Contact" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtRoomType" layoutX="366.0" layoutY="166.0" promptText="Room Type" />
+      <TextField fx:id="txtKeyMoney" layoutX="592.0" layoutY="166.0" promptText="Key Money" />
+      <TextField fx:id="txtQty" layoutX="816.0" layoutY="166.0" promptText="Qty" />
+      <ComboBox fx:id="cmbRoomId" layoutX="40.0" layoutY="166.0" prefHeight="31.0" prefWidth="187.0" promptText="Room Id" />
+   </children>
+</AnchorPane>

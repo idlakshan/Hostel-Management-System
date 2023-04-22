@@ -21,23 +21,26 @@ public class DashboardFormController {
     public Button btnDashboard;
     public Button btnLogout;
 
+
     public void initialize() throws IOException {
         setUi("HomePageForm");
     }
-
 
     public void studentOnAction(ActionEvent event) throws IOException {
         setUi("StudentForm");
 
     }
 
-    public void roomOnAction(ActionEvent event) {
+    public void roomOnAction(ActionEvent event) throws IOException {
+        setUi("RoomsForm");
     }
 
-    public void bookingOnAction(ActionEvent event) {
+    public void bookingOnAction(ActionEvent event) throws IOException {
+        setUi("RegisterForm");
     }
 
-    public void reportOnAction(ActionEvent event) {
+    public void reportOnAction(ActionEvent event) throws IOException {
+        setUi("DetailsReportForm");
     }
 
     public void dashboardOnAction(ActionEvent event) throws IOException {
